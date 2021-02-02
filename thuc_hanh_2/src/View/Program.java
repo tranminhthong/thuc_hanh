@@ -76,12 +76,9 @@ public class Program {
                             case 1:
                                 System.out.println("Nhập mã công tơ khách hàng:");
                                 long electricMeterCode = Long.parseLong(sc.nextLine());
-                                System.out.println("Nhập chỉ số cũ: ");
-                                int oldNumber = Integer.parseInt(sc.nextLine());
-                                System.out.println("Nhập chỉ số mới: ");
-                                int newNumber = Integer.parseInt(sc.nextLine());
+                                Receipt receipt = Menus.getInfoReceipt();
                                 Customer customer = cm.getACustomer(electricMeterCode);
-                                Receipt receipt = new Receipt(oldNumber, newNumber, customer);
+                                receipt.setCustomer(customer);
                                 rm.add(receipt);
                                 break;
                             case 2:
