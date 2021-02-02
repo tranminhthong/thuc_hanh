@@ -1,3 +1,5 @@
+package Entities;
+
 public class Customer {
     private String name;
     private int numberHouse;
@@ -34,5 +36,14 @@ public class Customer {
 
     public void setElectricMeterCode(long electricMeterCode) {
         this.electricMeterCode = electricMeterCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", numberHouse=" + numberHouse +
+                ", electricMeterCode=" + electricMeterCode +
+                '}';
     }
 }

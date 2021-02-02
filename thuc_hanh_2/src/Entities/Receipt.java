@@ -1,7 +1,20 @@
+package Entities;
+
+import Entities.Customer;
+
 public class Receipt {
     private int oldNumber;
     private int newNumber;
-    Customer customer = new Customer();
+    private Customer customer;
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+
 
     public Receipt(int oldNumber, int newNumber, Customer customer) {
         this.oldNumber = oldNumber;
@@ -27,4 +40,14 @@ public class Receipt {
     public void setNewNumber(int newNumber) {
         this.newNumber = newNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Receipt {" +
+                "oldNumber = " + oldNumber +
+                ", newNumber = " + newNumber +
+                ", customer = " + customer +
+                '}';
+    }
+
 }
