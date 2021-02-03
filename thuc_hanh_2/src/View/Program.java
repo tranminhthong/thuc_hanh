@@ -5,7 +5,6 @@ import Behaviors.ReceiptManagement;
 import Entities.Customer;
 import Entities.Receipt;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Program {

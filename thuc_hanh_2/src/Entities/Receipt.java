@@ -6,6 +6,7 @@ public class Receipt {
     private int oldNumber;
     private int newNumber;
     private Customer customer;
+
     public Customer getCustomer() {
         return customer;
     }
@@ -13,7 +14,6 @@ public class Receipt {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
-
 
 
     public Receipt(int oldNumber, int newNumber, Customer customer) {
