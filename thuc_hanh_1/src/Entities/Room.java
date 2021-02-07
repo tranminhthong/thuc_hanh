@@ -1,21 +1,24 @@
-import java.util.ArrayList;
+package Entities;
+
+import java.util.List;
 
 public class Room {
     private int timeStart;
     private int numberRoom;
     private String typeRoom;
     private int roomPrices;
-    ArrayList<Person> persons = new ArrayList<>();
+    private List<Person> persons;
 
     public Room() {
     }
 
-    public Room(int numberRoom, String typeRoom, int roomPrice) {
+    public Room(int numberRoom, String typeRoom, int roomPrices, List<Person> persons) {
         this.numberRoom = numberRoom;
-
         this.typeRoom = typeRoom;
-        this.roomPrices = roomPrice;
+        this.roomPrices = roomPrices;
+        this.persons = persons;
     }
+
     public int getTimeStart() {
         return timeStart;
     }
@@ -23,6 +26,7 @@ public class Room {
     public void setTimeStart(int timeStart) {
         this.timeStart = timeStart;
     }
+
     public int getNumberRoom() {
         return numberRoom;
     }
@@ -47,4 +51,22 @@ public class Room {
         this.roomPrices = roomPrices;
     }
 
+    public List<Person> getPersons() {
+        return persons;
+    }
+
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "timeStart=" + timeStart +
+                ", numberRoom=" + numberRoom +
+                ", typeRoom='" + typeRoom + '\'' +
+                ", roomPrices=" + roomPrices +
+                ", persons=" + persons +
+                '}';
+    }
 }

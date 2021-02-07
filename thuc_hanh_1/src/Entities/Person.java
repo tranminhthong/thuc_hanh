@@ -1,15 +1,18 @@
+package Entities;
+
 public class Person {
+    private int identity;
     private String name;
     private int age;
-    private int identity;
+
 
     public Person() {
     }
 
-    public Person(String name, int age, int identity) {
+    public Person(int identity, String name, int age) {
+        this.identity = identity;
         this.name = name;
         this.age = age;
-        this.identity = identity;
     }
 
     public String getName() {
