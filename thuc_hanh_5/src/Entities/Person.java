@@ -1,21 +1,21 @@
-package Enttities;
+package Entities;
 
-public class Officers {
+public class Person {
     private int id;
     private String name;
-    private String gender;
     private String dateOfBirth;
-    private String address;
+    private String gender;
+    private String career;
 
-    public Officers() {
+    public Person() {
     }
 
-    public Officers(int id, String name, String gender, String dateOfBirth, String address) {
+    public Person(int id, String name, String dateOfBirth,String gender, String career) {
         this.id = id;
         this.name = name;
-        this.gender = gender;
         this.dateOfBirth = dateOfBirth;
-        this.address = address;
+        this.gender = gender;
+        this.career = career;
     }
 
     public String getGender() {
@@ -28,6 +28,10 @@ public class Officers {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -46,21 +50,22 @@ public class Officers {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCareer() {
+        return career;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCareer(String career) {
+        this.career = career;
     }
 
     @Override
     public String toString() {
-        return "{" +
+        return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", address='" + address + ", ";
+                ", gender='" + gender + '\'' +
+                ", career='" + career + '\'' +
+                '}';
     }
 }

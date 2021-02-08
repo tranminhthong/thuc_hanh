@@ -27,10 +27,10 @@ public class CustomerManagement {
     public void show() {
         if (customers.size() == 0) {
             System.out.println("List is null");
-        }else
-        for (Customer c : customers) {
-            System.out.println(c.toString());
-        }
+        } else
+            for (Customer c : customers) {
+                System.out.println(c.toString());
+            }
     }
 
     public void update(Customer customer) {
@@ -51,9 +51,9 @@ public class CustomerManagement {
         }
     }
 
-    public boolean isListNull(){
+    public boolean isListNull() {
         boolean check = false;
-        if (customers.size()==0){
+        if (customers.size() == 0) {
             check = true;
         }
         return check;

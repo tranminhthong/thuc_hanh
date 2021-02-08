@@ -20,11 +20,7 @@ public class BookManagement {
     }
 
     public void deleteBook(int id) {
-        for (Book b : books) {
-            if (b.getId() == id) {
-                books.remove(b);
-            }
-        }
+        books.removeIf(b -> b.getId() == id);
     }
 
     public Book getBookById(int id) {

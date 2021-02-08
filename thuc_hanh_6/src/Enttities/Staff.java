@@ -1,13 +1,13 @@
 package Enttities;
 
-public class NhanVien extends Officers {
+public class Staff extends Officers {
     private String work;
 
-    public NhanVien() {
+    public Staff() {
     }
 
-    public NhanVien(int id, String name, String dateOfBirth, String address, String work) {
-        super(id, name, dateOfBirth, address);
+    public Staff(int id, String name, String gender, String dateOfBirth, String address, String work) {
+        super(id, name, gender, dateOfBirth, address);
         this.work = work;
     }
 
@@ -21,9 +21,8 @@ public class NhanVien extends Officers {
 
     @Override
     public String toString() {
-        return "NhanVien{" +
-                "work='" + work + '\'' +
-                '}';
+        return "Staff " + super.toString() +
+                "work='" + work + "}";
     }
 }
 

@@ -20,25 +20,22 @@ public class StudentManagement {
         }
     }
 
-    public void deleteStudent(int id){
-        for (Student st: students){
-            if (st.getId()==id){
-                students.remove(st);
-            }
-        }
+    public void deleteStudent(int id) {
+        students.removeIf(st -> st.getId() == id);
     }
-    public Student getStudentById(int id){
+
+    public Student getStudentById(int id) {
         Student student = new Student();
-        for (Student st: students){
-            if(st.getId()==id){
+        for (Student st : students) {
+            if (st.getId() == id) {
                 student = st;
             }
         }
         return student;
     }
 
-    public void showAllStudent(){
-        for(Student st: students){
+    public void showAllStudent() {
+        for (Student st : students) {
             System.out.println(st.toString());
         }
     }

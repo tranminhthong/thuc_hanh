@@ -1,13 +1,10 @@
 package Enttities;
 
-public class KySu extends Officers {
+public class Engineer extends Officers {
     private String majors;
 
-    public KySu() {
-    }
-
-    public KySu(int id, String name, String dateOfBirth, String address, String majors) {
-        super(id, name, dateOfBirth, address);
+    public Engineer(int id, String name, String gender, String dateOfBirth, String address, String majors) {
+        super(id, name, gender, dateOfBirth, address);
         this.majors = majors;
     }
 
@@ -21,8 +18,7 @@ public class KySu extends Officers {
 
     @Override
     public String toString() {
-        return "KySu{" +
-                "majors='" + majors + '\'' +
-                '}';
+        return "Engineer " + super.toString() +
+                "majors='" + majors + "}";
     }
 }

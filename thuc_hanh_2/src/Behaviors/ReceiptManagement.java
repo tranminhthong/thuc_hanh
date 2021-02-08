@@ -14,10 +14,10 @@ public class ReceiptManagement {
     public void show() {
         if (receipts.size() == 0) {
             System.out.println("List is null");
-        }else
-        for (Receipt r : receipts) {
-            System.out.println(r.toString());
-        }
+        } else
+            for (Receipt r : receipts) {
+                System.out.println(r.toString());
+            }
     }
 
     public int calculateBill(long electricMeterCode) {

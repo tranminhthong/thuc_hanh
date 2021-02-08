@@ -27,5 +27,4 @@ public class Menus {
         Customer customer = new Customer();
         return new Receipt(oldNumber, newNumber, customer);
     }
-
 }
