@@ -73,14 +73,17 @@ public class ResidentialManagement {
         }
     }
     public void displayFamilyHasPersonEqual80(){
+        boolean check = false;
         for (Residential r: residencies){
             for (Family f: r.getFamilies()){
                 for (Person p: f.getPersons()){
                     if (p.getDateOfBirth().equals("80")){
-                        System.out.println(f);
+                        System.out.println(f+", Resident: "+ r.getNameResidential());
+                        check = true;
                     }
                 }
             }
         }
+        if (!check) System.out.println("No family has person equal 80 year old.");
     }
 }

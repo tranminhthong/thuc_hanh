@@ -1,13 +1,13 @@
 package View;
 
-import Behaviors.Method;
+import Behaviors.RoomManagement;
 import Entities.Person;
 
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
-        Method m = new Method();
+        RoomManagement rm = new RoomManagement();
         Scanner sc = new Scanner(System.in);
         startMenu:
         do {
@@ -21,12 +21,12 @@ public class Program {
                 switch (choice1) {
                     case 1:
                         System.out.println("\nDanh sách phòng trống");
-                        m.listRoom();
+                        rm.listRoom();
                         System.out.print("\nChọn số phòng: ");
                         int numberRoom = Integer.parseInt(sc.nextLine());
                         System.out.print("Nhập thời gian thuê phòng: ");
                         int timeStart = Integer.parseInt(sc.nextLine());
-                        m.setTime(numberRoom, timeStart);
+                        rm.setTime(numberRoom, timeStart);
                         do {
                             System.out.print("-------------------Quản lý phòng-----------------------" +
                                     "\n1: Thêm người" +
@@ -39,22 +39,22 @@ public class Program {
                             switch (choice) {
                                 case 1:
                                     Person person = Menus.getInfoPerson();
-                                    m.addPerson(person,numberRoom);
+                                    rm.addPerson(person,numberRoom);
                                     break;
                                 case 2:
                                     System.out.print("Nhập id cần cập nhật: ");
                                     int idUpdate = Integer.parseInt(sc.nextLine());
                                     System.out.print("Nhập tên: ");
                                     String  name = sc.nextLine();
-                                    m.update(numberRoom,idUpdate,name);
+                                    rm.update(numberRoom,idUpdate,name);
                                     break;
                                 case 3:
                                     System.out.print("Nhập id cần xóa: ");
                                     int id = Integer.parseInt(sc.nextLine());
-                                    m.deletePerson(id,numberRoom);
+                                    rm.deletePerson(id,numberRoom);
                                     break;
                                 case 4:
-                                    m.displayRoom(numberRoom);
+                                    rm.displayRoom(numberRoom);
                                     break;
                                 case 0:
                                     continue startMenu;
@@ -65,15 +65,15 @@ public class Program {
                     case 2:
                         System.out.println("Nhập id:");
                         int id1 = Integer.parseInt(sc.nextLine());
-                        System.out.println(m.searchPerson(id1).toString());
+                        System.out.println(rm.searchPerson(id1).toString());
                         break;
                     case 3:
                         System.out.print("Nhập số phòng: ");
                         int numRoom = Integer.parseInt(sc.nextLine());
-                        m.displayRoom(numRoom);
+                        rm.displayRoom(numRoom);
                         System.out.print("Nhập thời gian trả phòng: ");
                         int timeEnd = Integer.parseInt(sc.nextLine());
-                        int total = m.pay(numRoom,timeEnd);
+                        int total = rm.pay(numRoom,timeEnd);
                         System.out.println("Tổng tiền phải thanh toán là: "+total+" VNĐ");
                         break;
                 }

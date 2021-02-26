@@ -1,6 +1,8 @@
 package Entities;
 
-public class Documents {
+import java.io.Serializable;
+
+public class Documents implements Serializable {
     private int code;
     private String nameProducer;
     private int soBanPhatHanh;

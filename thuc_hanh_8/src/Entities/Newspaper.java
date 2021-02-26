@@ -1,6 +1,8 @@
 package Entities;
 
-public class Newspaper extends Documents {
+import java.io.Serializable;
+
+public class Newspaper extends Documents implements Serializable {
     private String date;
 
     public Newspaper() {

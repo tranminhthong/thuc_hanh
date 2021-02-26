@@ -5,7 +5,7 @@ import Entities.Room;
 
 import java.util.ArrayList;
 
-public class Method {
+public class RoomManagement {
     static ArrayList<Room> rooms = new ArrayList<>();
 
     static {

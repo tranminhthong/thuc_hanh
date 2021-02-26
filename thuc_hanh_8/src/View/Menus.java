@@ -1,5 +1,6 @@
 package View;
 
+import Behaviors.Management;
 import Entities.Book;
 import Entities.Documents;
 import Entities.Journal;
@@ -31,8 +32,7 @@ public class Menus {
             default:
                 System.err.println("Try Again");
         }
-        System.out.print("Nhập mã tài liệu: ");
-        int code = Integer.parseInt(sc.nextLine());
+
         System.out.print("Nhập tên nhà xuất bản: ");
         String name = sc.nextLine();
         System.out.print("Nhập số bản phát hành: ");
@@ -44,17 +44,17 @@ public class Menus {
                 String nameAuthor = sc.nextLine();
                 System.out.print("Nhập số trang: ");
                 int page = Integer.parseInt(sc.nextLine());
-                return new Book(code, name, soBan, nameAuthor, page);
+                return new Book(0, name, soBan, nameAuthor, page);
             case "newspaper":
                 System.out.print("Nhập ngày phát hành: ");
                 String date = sc.nextLine();
-                return new Newspaper(code, name, soBan, date);
+                return new Newspaper(0, name, soBan, date);
             case "journal":
                 System.out.print("Nhập số phát hành: ");
                 String soPhat = sc.nextLine();
                 System.out.print("Nhập tháng phát hành: ");
                 int month = Integer.parseInt(sc.nextLine());
-                return new Journal(code, name, soBan, soPhat, month);
+                return new Journal(0, name, soBan, soPhat, month);
         }
         return null;
     }

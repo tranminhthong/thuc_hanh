@@ -1,6 +1,8 @@
 package Entities;
 
-public class Journal extends Documents {
+import java.io.Serializable;
+
+public class Journal extends Documents implements Serializable {
     private String soPhatHanh;
     private int thangPhatHanh;
 

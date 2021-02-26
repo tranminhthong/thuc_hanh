@@ -1,6 +1,8 @@
 package Entities;
 
-public class Book extends Documents {
+import java.io.Serializable;
+
+public class Book extends Documents implements Serializable {
     private String author;
     private int numberOfPages;
 
